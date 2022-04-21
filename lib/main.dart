@@ -22,71 +22,31 @@ class IdCard extends StatelessWidget {
           children: [
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/head_shot.png'),
-                radius: 60.0,
+                radius: 62.0,
+                backgroundColor: Color.fromARGB(255, 185, 255, 169),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/head_shot.png'),
+                  radius: 60.0,
+                ),
               ),
             ),
-            SizedBox(height: 40.0),
-            Text(
-              "NAME",
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2.0,
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "Danielle Kom",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 217, 184, 68),
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold),
-            ),
             SizedBox(height: 30.0),
-            Text(
-              "AGE",
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2.0,
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "30",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 217, 184, 68),
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 30.0),
-            Text(
-              "LOCATION",
-              style: TextStyle(
-                  color: Colors.grey,
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "Fort Lauderdale, Fl",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 217, 184, 68),
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 30.0),
-            Text(
-              "CONTACT",
-              style: TextStyle(
-                  color: Colors.grey,
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 5.0),
             Row(
+              mainAxisAlignment:MainAxisAlignment.center,
+              children: const [
+                Text(
+                  "CONTACT ME",
+                  style: TextStyle(
+                      color: Colors.grey,
+                      letterSpacing: 2.0,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            SizedBox(height: 5.0),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
                   Icons.email,
@@ -103,6 +63,96 @@ class IdCard extends StatelessWidget {
                 ),
               ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.phone_android_outlined,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  '(305) 850-2218',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.white,
+              // thickness: .5,
+            ),
+            Text(
+              "NAME",
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "Danielle Kom",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 185, 255, 169),
+                  letterSpacing: 2.0,
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 25.0),
+            Text(
+              "AGE",
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "30",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 185, 255, 169),
+                  letterSpacing: 2.0,
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 25.0),
+            Text(
+              "LOCATION",
+              style: TextStyle(
+                  color: Colors.grey,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "Fort Lauderdale, FL",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 185, 255, 169),
+                  letterSpacing: 2.0,
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 25.0),
+            Text(
+              "PROFESSION",
+              style: TextStyle(
+                  color: Colors.grey,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "Software Engineer",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 185, 255, 169),
+                  letterSpacing: 2.0,
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold),
+            ),
           ],
         ),
       ),
@@ -110,10 +160,10 @@ class IdCard extends StatelessWidget {
         onPressed: () {
           print('you clicked me');
         },
-        child: Icon(Icons.add_rounded),
-        backgroundColor: Colors.black,
-        foregroundColor: Color.fromARGB(255, 248, 248, 248),
-        splashColor: Colors.orange,
+        child: Icon(Icons.arrow_forward_ios_rounded),
+        backgroundColor: Colors.grey[850],
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
+        splashColor: Color.fromARGB(255, 185, 255, 169),
       ),
     );
   }
