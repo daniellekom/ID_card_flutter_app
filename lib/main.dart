@@ -4,7 +4,15 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(home: IdCard()));
 
-class IdCard extends StatelessWidget {
+class IdCard extends StatefulWidget {
+  @override
+  State<IdCard> createState() => _IdCardState();
+}
+
+class _IdCardState extends State<IdCard> {
+
+int age = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +22,17 @@ class IdCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            age+=1;
+          });
+         },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[850],
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
+        splashColor: Color.fromARGB(255, 185, 255, 169),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -112,7 +131,7 @@ class IdCard extends StatelessWidget {
             ),
             SizedBox(height: 5.0),
             Text(
-              "30",
+              "$age",
               style: TextStyle(
                   color: Color.fromARGB(255, 185, 255, 169),
                   letterSpacing: 2.0,
@@ -156,15 +175,10 @@ class IdCard extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('you clicked me');
-        },
-        child: Icon(Icons.arrow_forward_ios_rounded),
-        backgroundColor: Colors.grey[850],
-        foregroundColor: Color.fromARGB(255, 255, 255, 255),
-        splashColor: Color.fromARGB(255, 185, 255, 169),
-      ),
+     
     );
   }
 }
+
+
+
